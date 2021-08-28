@@ -26,9 +26,9 @@ async def BotX():
     async with user_bot:
         while True:
             print("[INFO] starting to check uptime..")
-            await user_bot.edit_message(int(chnl_id), msg_id, "**👾 : @DamienSoukara Bots Stats**\n\n`Performing a periodic check...`")
+            await user_bot.edit_message(int(chnl_id), msg_id, "**💗 𝐎𝐮𝐫 𝐀𝐥𝐥 𝐁𝐨𝐭𝐬 𝐋𝐢𝐬𝐭 𝐚𝐧𝐝 𝐋𝐢𝐯𝐞 𝐒𝐭𝐚𝐭𝐮𝐬 💖**\n\n`Performing a periodic check...`")
             c = 0
-            edit_text = "👾 : **@DamienSoukara Bots Stats**\n\n💬 **INFO :** ✅ = ONLINE  ❌ = OFFLINE\n\n📜 **BOTS :**\n\n"
+            edit_text = "👾 : **💗 𝐎𝐮𝐫 𝐀𝐥𝐥 𝐁𝐨𝐭𝐬 𝐋𝐢𝐬𝐭 𝐚𝐧𝐝 𝐋𝐢𝐯𝐞 𝐒𝐭𝐚𝐭𝐮𝐬 💖**\n\n💬 **INFO :** ✅ = ONLINE  ❌ = OFFLINE\n\n📜 **BOTS :**\n\n"
             for bot in bots:
                 print(f"[INFO] checking @{bot}")
                 snt = await user_bot.send_message(bot, "/start")
@@ -55,7 +55,7 @@ async def BotX():
                 await user_bot.edit_message(int(chnl_id), msg_id, edit_text)
             utc_now = datetime.datetime.utcnow()
             ist_now = utc_now + datetime.timedelta(minutes=30, hours=5)
-            edit_text +=f"\n⏱ **Last Checked:** \n`{str(utc_now)}`\n`{ist_now} IST`\n\n__👾 Bots Status Are Auto-Updated Every 2 Hours__"
+            edit_text +=f"\n⏱ **Last Checked:** \n`{str(utc_now)}`\n`{ist_now} IST`\n\n__💖 Bots Status Are Auto-Updated Every 2 Hours__"
             await user_bot.edit_message(int(chnl_id), msg_id, edit_text)
             print(f"Checks since last restart - {c}")
             print("Sleeping for 2 hours.")
